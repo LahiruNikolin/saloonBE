@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.post("/", employeeValidations.create, employeeController.create);
 router.get("/", employeeController.findAll);
+router.delete("/:id", employeeController.deleteById);
 
 module.exports = router;
