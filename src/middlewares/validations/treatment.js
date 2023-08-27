@@ -3,6 +3,7 @@ const Joi = require("joi");
 const createSchema = Joi.object({
   name: Joi.string().required(),
   duration: Joi.string().required(),
+  price: Joi.number().required(),
 });
 
 const create = async (req, res, next) => {

@@ -21,6 +21,7 @@ const mapApointmentsByDate = (results) => {
         endTime: format(appointment.endTime, "h:mm aaa"),
         treatments: appointment.treatments.map((treatment) => ({
           name: treatment.name,
+          price: parseFloat(treatment.price),
         })),
         isStarted: appointment.jobStatus?.isStarted,
         isCompleted: appointment.jobStatus?.isCompleted,
@@ -42,6 +43,7 @@ const mapApointmentsByDate = (results) => {
             endTime: format(appointment.endTime, "h:mm aaa"),
             treatments: appointment.treatments.map((treatment) => ({
               name: treatment.name,
+              price: parseFloat(treatment.price),
             })),
             isStarted: appointment.jobStatus?.isStarted,
             isCompleted: appointment.jobStatus?.isCompleted,

@@ -1,11 +1,12 @@
 const Treatment = require("../models/treatment");
 
 const create = async (req, res, next) => {
-  const { name, duration } = req.body;
+  const { name, duration, price } = req.body;
 
   const treatment = new Treatment({
     name,
     duration,
+    price
   });
 
   try {
