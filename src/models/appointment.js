@@ -3,7 +3,6 @@ const appointmentSchema = new mongoose.Schema({
   title: { type: String, required: true },
   jobId: {
     type: String,
-    index: true,
   },
   color: { type: String, required: true },
   scheduledDate: { type: Date, required: true },

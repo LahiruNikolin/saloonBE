@@ -31,6 +31,7 @@ const mapApointmentsByDate = (results) => {
     } else {
       const item = {
         id: appointment._id,
+        jobId: appointment.jobId,
         empId: appointment.employee._id,
         customer: appointment.customer,
         title: appointment.title,

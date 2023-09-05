@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const create = async (req, res, next) => {
   const {
     title,
+    jobId,
     startTime,
     endTime,
     customer,
@@ -16,11 +17,11 @@ const create = async (req, res, next) => {
     scheduledDate,
   } = req.body;
 
-  const jobId = shortid.generate();
+  const generatedjobId = jobId ?? shortid.generate();
 
   const appointment = new Appointment({
     title,
-    jobId,
+    jobId: generatedjobId,
     startTime,
     endTime,
     treatments,
